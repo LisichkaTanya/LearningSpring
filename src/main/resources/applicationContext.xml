@@ -9,18 +9,23 @@
 
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
-    <bean id="testBean"
-          class="com.lisichka.TestBean">
-        <constructor-arg value="Tatiana"/>
-    </bean>
+<!--    <bean id="testBean"-->
+<!--          class="com.lisichka.TestBean">-->
+<!--        <constructor-arg value="Tatiana"/>-->
+<!--    </bean>-->
 
-    <bean id="musicBean"
-          class="com.lisichka.RockMusic">
-    </bean>
+<!--    <bean id="musicBean"-->
+<!--          class="com.lisichka.RockMusic">-->
+<!--    </bean>-->
 
-    <bean id="musicPlayer"
-    class="com.lisichka.MusicPlayer">
-        <property name="music" ref="musicBean"/>
+    <bean id="musicPlayer" class="com.lisichka.MusicPlayer">
+        <property name="musicList">
+            <list>
+                <bean id="classicalBean" class="com.lisichka.ClassicalMusic"/>
+                <bean id="rockBean" class="com.lisichka.RockMusic"/>
+                <bean id="jazzBean" class="com.lisichka.JazzMusic"/>
+            </list>
+        </property>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
     </bean>

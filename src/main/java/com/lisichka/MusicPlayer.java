@@ -1,22 +1,28 @@
 package com.lisichka;
 
+import java.util.List;
+
 public class MusicPlayer {
-    private Music music;
+    private List<Music> musicList;
     private String name;
     private int volume;
 
-    public MusicPlayer(){}
-
-    public MusicPlayer (Music music){
-        this.music = music;
+    public MusicPlayer(){
     }
 
-    public void setMusic(Music music) {
-        this.music = music;
+    public void setMusicList(List<Music> musicList) {
+        this.musicList = musicList;
     }
+
+    public List<Music> getMusicList() {
+        return musicList;
+    }
+
 
     public void playMusic (){
-        System.out.println(music.getSong());
+        for (int i = 0; i < musicList.size(); i++){
+            System.out.println(musicList.get(i).getSong());
+        }
     }
 
     public String getName() {
