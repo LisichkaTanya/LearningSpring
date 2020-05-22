@@ -7,7 +7,18 @@ public class MusicPlayer {
     private String name;
     private int volume;
 
-    public MusicPlayer(){
+    /**
+     * Сделаем приватный конструктор, чтобы при создании объекта использовать factory-method
+     */
+    private MusicPlayer(){
+    }
+
+    /**
+     * Этот метод будем использовать для создания объектов этого класса (factory-method)
+     * @return возвращаем новый объект класса MusicPlayer
+     */
+    public static MusicPlayer getMusicPlayer() {
+        return new MusicPlayer();
     }
 
     public void setMusicList(List<Music> musicList) {

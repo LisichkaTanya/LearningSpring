@@ -27,9 +27,11 @@ public class TestSpring {
          * Теперь решили все зависимости и все объекты (зависимости) создаются из конфигурационного файла
          */
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+        MusicPlayer musicPlayer1 = context.getBean("musicPlayer", MusicPlayer.class);
         musicPlayer.playMusic();
         System.out.println(musicPlayer.getName());
         System.out.println(musicPlayer.getVolume());
+        musicPlayer1.playMusic();
         context.close();
     }
 }
