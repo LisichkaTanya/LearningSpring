@@ -1,5 +1,8 @@
 package com.lisichka;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ClassicalMusic implements Music {
 
     public void myInit() {

@@ -2,14 +2,14 @@ package com.lisichka;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class TestSpring {
+public class TestSpringWithXml {
     public static void main(String[] args) {
         /**
-         * Этот класс мы получем от springframework. Этот класс обращается к файлу "applicationContext.xml",
+         * Этот класс мы получем от springframework. Этот класс обращается к файлу "applicationContextXml.xml",
          * считывает его (этот конфигурационных файл) и помещает все bean-ы, которые там описаны в application context
          */
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
+                "applicationContextXml.xml"
         );
 
 //        /**
