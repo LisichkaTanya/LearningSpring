@@ -4,11 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Computer {
+public class ComputerForMovie {
     private MoviePlayer moviePlayer;
 
     @Autowired
-    public Computer(MoviePlayer moviePlayer) {
+    public ComputerForMovie(MoviePlayer moviePlayer) {
         this.moviePlayer = moviePlayer;
     }
 
