@@ -7,9 +7,7 @@ public class TestSpringHomeWork2 {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringContext.class);
 
         ComputerForMusic computerForMusic = context.getBean("computerForMusic", ComputerForMusic.class);
-        computerForMusic.startMusicPlayer(MusicEnum.CLASSICAL);
-        computerForMusic.startMusicPlayer(MusicEnum.ROCK);
-        computerForMusic.startMusicPlayer(MusicEnum.JAZZ);
+        computerForMusic.startMusicPlayer();
 
         context.close();
     }

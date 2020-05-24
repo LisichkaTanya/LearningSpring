@@ -1,11 +1,9 @@
 package ru.useAnatation.HomeWork2;
 
-import org.springframework.stereotype.Component;
-
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+
 public class ClassicalMusic implements Music {
     private List<String> classicalList = new ArrayList<>();
 

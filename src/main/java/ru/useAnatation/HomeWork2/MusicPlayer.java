@@ -1,19 +1,14 @@
 package ru.useAnatation.HomeWork2;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-@Component
 public class MusicPlayer {
+
     private String name;
     private int volume;
-    List<Music> genreList = new ArrayList<>();
+    List<Music> genreList;
 
-    @Autowired
     public MusicPlayer(List<Music> genreList){
         this.genreList = genreList;
     }
