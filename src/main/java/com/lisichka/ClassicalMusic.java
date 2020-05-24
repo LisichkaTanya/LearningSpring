@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ClassicalMusic implements Music {
 
+
     public void myInit() {
         System.out.println("Doing my classic initialisation");
     }

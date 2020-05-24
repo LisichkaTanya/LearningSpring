@@ -1,24 +1,24 @@
-package ru.useAnatation.HomeWork;
+package ru.useAnatation.HomeWork2;
 
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Component
-public class RockMusic implements Music {
-    private List<String> rockList = new ArrayList<>();
+public class ClassicalMusic implements Music {
+    private List<String> classicalList = new ArrayList<>();
 
     //Блок инициализации объекта (англ. Instance initialization block)
     //Выполняется каждый раз, когда создается объект класса
     {
-        rockList.add("Rock music one");
-        rockList.add("Rock music two");
-        rockList.add("Rock music three");
+        classicalList.add("Classical music one");
+        classicalList.add("Classical music two");
+        classicalList.add("Classical music three");
     }
+
     @Override
     public List<String> getSong() {
-        return rockList;
+        return classicalList;
     }
 }
