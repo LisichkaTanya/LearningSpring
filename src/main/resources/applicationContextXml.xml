@@ -17,9 +17,9 @@
     <!--          class="com.lisichka.RockMusic">-->
     <!--    </bean>-->
 
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+    <context:property-placeholder location="classpath:musicPlayer1.properties"/>
 
-    <bean id="musicPlayer" class="com.lisichka.MusicPlayer" factory-method="getMusicPlayer">
+    <bean id="musicPlayer1" class="com.lisichka.MusicPlayer" factory-method="getMusicPlayer">
         <property name="musicList">
             <list>
                 <bean id="classicalBean" init-method="myInit" destroy-method="myDestroy" class="com.lisichka.ClassicalMusic"/>
@@ -27,8 +27,8 @@
                 <bean id="jazzBean" init-method="myInit" destroy-method="myDestroy" class="com.lisichka.JazzMusic"/>
             </list>
         </property>
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
+        <property name="name" value="${musicPlayer1.name}"/>
+        <property name="volume" value="${musicPlayer1.volume}"/>
     </bean>
 
 </beans>
